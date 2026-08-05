@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" fill="none">
+  <defs>
+    <linearGradient id="beltTop" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f3f63" />
+      <stop offset="55%" stop-color="#1d6ea8" />
+      <stop offset="100%" stop-color="#2098e8" />
+    </linearGradient>
+    <linearGradient id="beltSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b3450" />
+      <stop offset="100%" stop-color="#06202f" />
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9fd4f6" />
+      <stop offset="100%" stop-color="#3f8dbf" />
+    </linearGradient>
+    <linearGradient id="rollerG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f4fd" />
+      <stop offset="45%" stop-color="#8fb9d6" />
+      <stop offset="100%" stop-color="#33627f" />
+    </linearGradient>
+    <linearGradient id="sackTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dbe8f2" />
+    </linearGradient>
+    <linearGradient id="sackFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2edf6" />
+      <stop offset="100%" stop-color="#a9c3d6" />
+    </linearGradient>
+    <linearGradient id="sackSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8fabc0" />
+      <stop offset="100%" stop-color="#6c8aa1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#2098e8" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#2098e8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- ambient light pool under the line -->
+  <ellipse cx="620" cy="470" rx="520" ry="120" fill="url(#glow)" />
+
+  <!-- support legs (back pair, then front) -->
+  <g fill="#0b3450">
+    <rect x="238" y="392" width="16" height="150" rx="4" />
+    <rect x="612" y="356" width="16" height="176" rx="4" />
+    <rect x="986" y="320" width="16" height="202" rx="4" />
+  </g>
+  <g fill="#06202f">
+    <rect x="180" y="424" width="18" height="150" rx="4" />
+    <rect x="566" y="388" width="18" height="176" rx="4" />
+    <rect x="952" y="352" width="18" height="202" rx="4" />
+  </g>
+
+  <!-- belt body: front face then top surface, receding to the right -->
+  <path d="M120 470 L1080 306 L1080 348 L120 512 Z" fill="url(#beltSide)" />
+  <path d="M120 470 L1080 306 L1140 330 L180 494 Z" fill="url(#beltTop)" />
+
+  <!-- side rails -->
+  <path d="M120 462 L1080 298 L1080 310 L120 474 Z" fill="url(#rail)" opacity="0.85" />
+  <path d="M180 486 L1140 322 L1140 334 L180 498 Z" fill="url(#rail)" opacity="0.5" />
+
+  <!-- rollers across the belt run -->
+  <g stroke="url(#rollerG)" stroke-width="7" stroke-linecap="round" opacity="0.75">
+    <path d="M168 478 L228 488" />
+    <path d="M268 461 L328 471" />
+    <path d="M368 444 L428 454" />
+    <path d="M468 427 L528 437" />
+    <path d="M568 410 L628 420" />
+    <path d="M668 393 L728 403" />
+    <path d="M768 376 L828 386" />
+    <path d="M868 359 L928 369" />
+    <path d="M968 342 L1028 352" />
+  </g>
+
+  <!-- drive drums at each end -->
+  <ellipse cx="136" cy="484" rx="26" ry="30" fill="url(#rollerG)" transform="rotate(-10 136 484)" />
+  <ellipse cx="1112" cy="320" rx="24" ry="28" fill="url(#rollerG)" transform="rotate(-10 1112 320)" />
+
+  <!-- sugar sacks riding the line -->
+  <g>
+    <g transform="translate(250 392)">
+      <path d="M0 44 L84 30 L150 52 L64 68 Z" fill="url(#sackTop)" />
+      <path d="M0 44 L64 68 L64 112 L0 88 Z" fill="url(#sackSide)" />
+      <path d="M64 68 L150 52 L150 96 L64 112 Z" fill="url(#sackFront)" />
+    </g>
+    <g transform="translate(520 344)">
+      <path d="M0 44 L84 30 L150 52 L64 68 Z" fill="url(#sackTop)" />
+      <path d="M0 44 L64 68 L64 112 L0 88 Z" fill="url(#sackSide)" />
+      <path d="M64 68 L150 52 L150 96 L64 112 Z" fill="url(#sackFront)" />
+    </g>
+    <g transform="translate(790 296)">
+      <path d="M0 44 L84 30 L150 52 L64 68 Z" fill="url(#sackTop)" />
+      <path d="M0 44 L64 68 L64 112 L0 88 Z" fill="url(#sackSide)" />
+      <path d="M64 68 L150 52 L150 96 L64 112 Z" fill="url(#sackFront)" />
+    </g>
+  </g>
+
+  <!-- overhead gantry / sensor bar -->
+  <g opacity="0.55">
+    <rect x="640" y="120" width="14" height="150" rx="4" fill="#0b3450" />
+    <rect x="470" y="108" width="360" height="16" rx="6" fill="url(#rail)" />
+    <circle cx="647" cy="278" r="10" fill="#2098e8" />
+    <circle cx="647" cy="278" r="20" fill="#2098e8" opacity="0.25" />
+  </g>
+</svg>
